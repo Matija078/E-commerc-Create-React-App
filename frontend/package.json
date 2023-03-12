@@ -20,10 +20,6 @@
     "use-reducer-logger": "^1.0.2",
     "web-vitals": "^2.1.2"
   },
-  "resolutions": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
   "scripts": {
     "start": "set PORT=3002 && react-scripts start",
     "build": "react-scripts build",
