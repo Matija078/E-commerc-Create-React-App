@@ -1,14 +1,8 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
-  "description": "frontend",
-  "main": "index.js",
-  "scripts": {
-    "start": "set PORT=3002 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "proxy": "http://localhost:5000",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -26,9 +20,17 @@
     "use-reducer-logger": "^1.0.2",
     "web-vitals": "^2.1.2"
   },
-  "devDependencies": {
-    "eslint": "^8.3.0",
-    "eslint-config-react-app": "^6.0.0"
+  "scripts": {
+    "start": "set PORT=3002 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -41,7 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
