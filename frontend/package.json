@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "start": "set PORT=3002react/scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
