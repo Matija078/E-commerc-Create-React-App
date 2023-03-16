@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "start": "set PORT=3002 && react-scripts start",
+    "start": "set PORT=3007 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -43,10 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  }
 }
