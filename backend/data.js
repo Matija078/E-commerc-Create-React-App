@@ -6,7 +6,7 @@ const data = {
       name: 'Geir',
       email: 'user1@example.com',
       password: bcrypt.hashSync('123456'),
-      isAdmin: true,
+      isAdmin: false,
     },
     {
       name: 'Matija',
