@@ -23,4 +23,24 @@ orderRouter.post(
     res.status(201).send({ message: 'New Order Created', order });
   })
 );
+orderRouter.post(
+  '/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.status(404).send({ message: 'Order Not Found' });
+    }
+  })
+);
+orderRouter.post(
+  '/:id/pay',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      order.isPaid = true;
+    }
+  })
+);
 export default orderRouter;
