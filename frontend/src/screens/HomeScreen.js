@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
