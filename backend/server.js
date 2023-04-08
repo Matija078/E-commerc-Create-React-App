@@ -9,6 +9,8 @@ import orderRouter from './routes/orderRoutes.js';
 
 dotenv.config();
 
+mongoose.set('strictQuery', true); // add this line to fix the deprecation warning
+
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {

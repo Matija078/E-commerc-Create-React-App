@@ -96,7 +96,6 @@ function App() {
           <div className="text-center">All rights reserved</div>
         </footer>
       </div>
-      http://localhost:3009/placeorder
     </BrowserRouter>
   );
 }
