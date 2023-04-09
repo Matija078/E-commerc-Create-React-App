@@ -21,6 +21,9 @@ mongoose
 
 const app = express();
 
+app.get('/api/keys/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
