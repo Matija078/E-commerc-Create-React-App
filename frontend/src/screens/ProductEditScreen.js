@@ -69,15 +69,17 @@ export default function ProductEditScreen() {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(`/api/products/${productId}`);
-        setName(data.name);
-        setSlug(data.slug);
-        setPrice(data.price);
-        setImage(data.image);
-        setImages(data.images);
-        setCategory(data.category);
-        setCountInStock(data.countInStock);
-        setBrand(data.brand);
-        setDescription(data.description);
+        if (data) {
+          setName(data.name || '');
+          setSlug(data.slug || '');
+          setPrice(data.price || '');
+          setImage(data.image || '');
+          setImages(data.images || []);
+          setCategory(data.category || '');
+          setCountInStock(data.countInStock || '');
+          setBrand(data.brand || '');
+          setDescription(data.description || '');
+        }
         dispatch({ type: 'FETCH_SUCCESS' });
       } catch (err) {
         dispatch({
